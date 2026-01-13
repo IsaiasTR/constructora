@@ -3,14 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Constructora Horizonte</title>
+  <title>Constructora Tenorio</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
       color: #333;
     }
+
     header {
       background: #1f2937;
       color: #fff;
@@ -19,16 +21,20 @@
       justify-content: space-between;
       align-items: center;
     }
+
     header h1 {
       margin: 0;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
+      letter-spacing: 1px;
     }
+
     nav a {
       color: #fff;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
+
     .hero {
       background: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e') center/cover no-repeat;
       height: 70vh;
@@ -37,48 +43,68 @@
       padding: 0 60px;
       color: white;
     }
+
     .hero h2 {
-      font-size: 2.5rem;
-      max-width: 600px;
+      font-size: 2.6rem;
+      max-width: 650px;
+      background: rgba(0,0,0,0.55);
+      padding: 20px;
+      border-radius: 8px;
     }
+
     section {
       padding: 60px 40px;
       max-width: 1200px;
       margin: auto;
     }
+
     .services, .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 30px;
     }
+
     .card {
       border: 1px solid #e5e7eb;
       border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      padding: 25px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+      font-weight: 500;
     }
+
     .login {
       background: #f9fafb;
       border-radius: 8px;
       max-width: 400px;
       margin: auto;
+      padding: 30px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
     }
+
     .login input {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       margin-bottom: 15px;
       border: 1px solid #d1d5db;
       border-radius: 4px;
+      font-size: 1rem;
     }
+
     .login button {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       background: #1f2937;
       color: white;
       border: none;
       border-radius: 4px;
+      font-size: 1rem;
       cursor: pointer;
     }
+
+    .login button:hover {
+      background: #111827;
+    }
+
     footer {
       background: #1f2937;
       color: white;
@@ -87,10 +113,11 @@
     }
   </style>
 </head>
+
 <body>
 
 <header>
-  <h1>Constructora Horizonte</h1>
+  <h1>CONSTRUCTORA TENORIO</h1>
   <nav>
     <a href="#nosotros">Nosotros</a>
     <a href="#servicios">Servicios</a>
@@ -100,21 +127,25 @@
 </header>
 
 <section class="hero">
-  <h2>Construimos espacios pensados para tu futuro</h2>
+  <h2>Construimos calidad, confianza y futuro</h2>
 </section>
 
 <section id="nosotros">
   <h2>Quiénes somos</h2>
-  <p>Somos una empresa constructora con amplia experiencia en desarrollos residenciales y comerciales. Nos enfocamos en calidad, cumplimiento y transparencia en cada etapa del proyecto.</p>
+  <p>
+    Constructora Tenorio es una empresa dedicada al desarrollo de proyectos
+    inmobiliarios, con un fuerte compromiso en la calidad constructiva,
+    el cumplimiento de plazos y la transparencia con nuestros clientes.
+  </p>
 </section>
 
 <section id="servicios">
   <h2>Servicios</h2>
   <div class="services">
-    <div class="card">Construcción de edificios</div>
-    <div class="card">Desarrollos inmobiliarios</div>
-    <div class="card">Dirección de obra</div>
-    <div class="card">Remodelaciones</div>
+    <div class="card">Construcción de edificios residenciales</div>
+    <div class="card">Desarrollos inmobiliarios integrales</div>
+    <div class="card">Dirección y control de obra</div>
+    <div class="card">Remodelaciones y ampliaciones</div>
   </div>
 </section>
 
@@ -128,8 +159,9 @@
 </section>
 
 <section id="clientes">
-  <h2>Acceso clientes</h2>
-  <p>Ingrese para ver el avance de su departamento.</p>
+  <h2>Acceso exclusivo clientes</h2>
+  <p>Ingrese para visualizar el avance de su departamento.</p>
+
   <div class="login">
     <form onsubmit="return login()">
       <input type="text" id="user" placeholder="Usuario" required />
@@ -140,19 +172,18 @@
 </section>
 
 <footer>
-  <p>© 2026 Constructora Horizonte · Todos los derechos reservados</p>
+  <p>© 2026 Constructora Tenorio · Todos los derechos reservados</p>
 </footer>
 
 <script>
   function login() {
-    const user = document.getElementById('user').value;
-    const pass = document.getElementById('pass').value;
+    const user = document.getElementById("user").value;
+    const pass = document.getElementById("pass").value;
 
-    // Ejemplo simple. En producción debe usarse backend.
-    if (user === 'cliente' && pass === '1234') {
-      window.location.href = 'avance.html';
+    if (user === "isaias" && pass === "tenorio") {
+      window.location.href = "avance.html";
     } else {
-      alert('Usuario o contraseña incorrectos');
+      alert("Usted no es cliente autorizado");
     }
     return false;
   }
