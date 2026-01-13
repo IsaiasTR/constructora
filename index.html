@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Constructora Horizonte</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      color: #333;
+    }
+    header {
+      background: #1f2937;
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e') center/cover no-repeat;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      padding: 0 60px;
+      color: white;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      max-width: 600px;
+    }
+    section {
+      padding: 60px 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .services, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .login {
+      background: #f9fafb;
+      border-radius: 8px;
+      max-width: 400px;
+      margin: auto;
+    }
+    .login input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #d1d5db;
+      border-radius: 4px;
+    }
+    .login button {
+      width: 100%;
+      padding: 10px;
+      background: #1f2937;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    footer {
+      background: #1f2937;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Constructora Horizonte</h1>
+  <nav>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#clientes">Clientes</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Construimos espacios pensados para tu futuro</h2>
+</section>
+
+<section id="nosotros">
+  <h2>Quiénes somos</h2>
+  <p>Somos una empresa constructora con amplia experiencia en desarrollos residenciales y comerciales. Nos enfocamos en calidad, cumplimiento y transparencia en cada etapa del proyecto.</p>
+</section>
+
+<section id="servicios">
+  <h2>Servicios</h2>
+  <div class="services">
+    <div class="card">Construcción de edificios</div>
+    <div class="card">Desarrollos inmobiliarios</div>
+    <div class="card">Dirección de obra</div>
+    <div class="card">Remodelaciones</div>
+  </div>
+</section>
+
+<section id="proyectos">
+  <h2>Proyectos destacados</h2>
+  <div class="projects">
+    <div class="card">Edificio Torre Norte</div>
+    <div class="card">Complejo Residencial Sur</div>
+    <div class="card">Condominio Vista Río</div>
+  </div>
+</section>
+
+<section id="clientes">
+  <h2>Acceso clientes</h2>
+  <p>Ingrese para ver el avance de su departamento.</p>
+  <div class="login">
+    <form onsubmit="return login()">
+      <input type="text" id="user" placeholder="Usuario" required />
+      <input type="password" id="pass" placeholder="Contraseña" required />
+      <button type="submit">Ingresar</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Constructora Horizonte · Todos los derechos reservados</p>
+</footer>
+
+<script>
+  function login() {
+    const user = document.getElementById('user').value;
+    const pass = document.getElementById('pass').value;
+
+    // Ejemplo simple. En producción debe usarse backend.
+    if (user === 'cliente' && pass === '1234') {
+      window.location.href = 'avance.html';
+    } else {
+      alert('Usuario o contraseña incorrectos');
+    }
+    return false;
+  }
+</script>
+
+</body>
+</html>
